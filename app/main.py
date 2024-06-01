@@ -158,7 +158,7 @@ def add_predictions(input_data):
     if prediction[0]==0:
         st.write("<span class='diag b'>BENIGN</span>",unsafe_allow_html=True)
     else:
-        st.write("<span class='diag m'>MALICIOUS</span>",unsafe_allow_html=True)
+        st.write("<span class='diag m'>MALIGNANT</span>",unsafe_allow_html=True)
 
     st.write("probability of being benign is :",model.predict_proba(input_array_scaled)[0][0])
     st.write("probability of being malicious is :",model.predict_proba(input_array_scaled)[0][1])
@@ -189,6 +189,7 @@ def main():
     with st.container():
         st.title("BREAST CANCER PREDICTOR USING ML")
         st.subheader("created by AYYAPPADAS M.T.")
+        st.subheader("CSE Student of AMRITA VISHWAVIDYAPEETHAM,KOLLAM")
         st.write("Welcome to the new era of medical diagnosis.Please connect this app to your cytology lab to help diagnose breast cancer from your tissue sample. This app predicts using a machine learning model whether a breast mass is benign or malignant based on the measurements it receives from your cytology lab. You can also update the measurements by hand using the sliders in the sidebar.")
 
     col1,col2=st.columns([4,1])
